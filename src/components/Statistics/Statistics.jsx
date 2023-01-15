@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
+  
   return (
     <div>
       <p>Good {good}</p>
