@@ -10,11 +10,7 @@ export const App = () => {
   const [bad, setBad] = useState(0);
 
   const countPositiveFeedbackPercentage = () => {
-    let percent = 0;
-
-    percent = ((good / countTotalFeedback()) * 100).toFixed();
-
-    return percent;
+    return ((good / countTotalFeedback()) * 100).toFixed();
   };
 
   const countTotalFeedback = () => {
