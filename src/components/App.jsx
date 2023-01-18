@@ -18,11 +18,10 @@ export const App = () => {
   };
 
   const countTotalFeedback = () => {
-    let total = good + neutral + bad;
-    return total;
+    return good + neutral + bad;
   };
 
-  const incerremntStats = event => {
+  const inceremntStats = event => {
     const nameStat = event.target.textContent.toLowerCase();
     if (nameStat === 'good') {
       setGood(good + 1);
@@ -35,12 +34,9 @@ export const App = () => {
 
   return (
     <>
-      <Section
-        title="Please leave feedback"
-        children={
-          <FeedbackOptions onLeaveFeedback={incerremntStats}></FeedbackOptions>
-        }
-      ></Section>
+      <Section title="Please leave feedback">
+        <FeedbackOptions onLeaveFeedback={inceremntStats}></FeedbackOptions>
+      </Section>
 
       <Section
         title={'Statistics'}
