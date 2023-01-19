@@ -34,22 +34,19 @@ export const App = () => {
         <FeedbackOptions onLeaveFeedback={inceremntStats}></FeedbackOptions>
       </Section>
 
-      <Section
-        title={'Statistics'}
-        children={
-          countTotalFeedback() === 0 ? (
-            <Notification message={'There is no feedback'} />
-          ) : (
-            <Statistics
-              good={good}
-              neutral={neutral}
-              bad={bad}
-              total={countTotalFeedback()}
-              positivePercentage={countPositiveFeedbackPercentage()}
-            ></Statistics>
-          )
-        }
-      ></Section>
+      <Section title={'Statistics'}>
+        {countTotalFeedback() === 0 ? (
+          <Notification message={'There is no feedback'} />
+        ) : (
+          <Statistics
+            good={good}
+            neutral={neutral}
+            bad={bad}
+            total={countTotalFeedback()}
+            positivePercentage={countPositiveFeedbackPercentage()}
+          ></Statistics>
+        )}
+      </Section>
     </>
   );
 };
